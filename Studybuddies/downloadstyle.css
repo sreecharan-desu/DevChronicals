@@ -1,0 +1,47 @@
+h1{
+    font-family: brightside;
+    color: whitesmoke;
+    font-size: 150px;
+    text-align: center;
+    margin-left: 350px;
+    margin-top:300px;
+    transition: 2s;
+    cursor: pointer;
+}
+h1:hover{
+    color: orange;
+}
+
+
+
+h2{
+    color: whitesmoke;
+    text-align: center;
+    font-family: dyuthi;
+    font-size: 50px;
+    margin-left:350px;
+}
+
+
+body{
+    background-color: rgb(113, 156, 238);
+}
+img{
+    margin-left: 550px;
+    margin-right: 500px;
+}
+
+a{
+    text-decoration: none;
+}
+
+button{
+    background-color:transparent;
+    border-color: transparent;
+    cursor: pointer;
+}
+
+
+embed{
+    margin-left: 200px;
+}

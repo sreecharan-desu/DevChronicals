@@ -1,0 +1,25 @@
+{
+  "name": "spay",
+  "version": "1.0.0",
+  "description": "A basic paytm app ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "repository": {
+    "type": "git",
+    "url": "SPay"
+  },
+  "keywords": [
+    "paymets"
+  ],
+  "author": "SreeCharan Desu",
+  "license": "MIT",
+  "homepage": "http://sreecharan-desu.github.io/Spay/"
+}

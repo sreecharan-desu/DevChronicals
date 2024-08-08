@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> GradeHub | Student</title>
+    <link rel="icon" href="student_icon.png">
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cabin+Condensed:wght@600&display=swap');
+body{
+    background-color:whitesmoke;
+}
+*{
+    font-family: 'Cabin Condensed', sans-serif;
+}
+html{
+    scroll-behavior:smooth;
+}
+a{
+    text-decoration:none;
+    color:white;
+}
+
+.header{
+    top:0px;
+    position:sticky;
+}
+.header .nav{
+    height:60px;
+    margin:-10px -10px -10px -10px;
+    background-color:#1b2e35;
+    color:white;
+    display:flex;
+    flex-direction:row;
+    font-family: 'Cabin Condensed', sans-serif;
+    padding:0px 30px 0px 20px;
+    font-size:12px;
+    justify-content:space-between;
+    text-transform:capitalize;
+    letter-spacing:2px;
+
+}
+
+.header h1{
+    font-style:oblique;
+}
+
+.main{
+    height:auto;
+}
+
+.select-criteria h1{
+    padding:0px 100px;
+}
+
+.select-criteria table{
+    margin:0px 100px;
+}
+
+.select-criteria table th{
+    padding:0px 0px 0px 80px;
+}
+
+.select-criteria select{
+    width: 200px;
+    height:34px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid #1b2e35;
+    -webkit-transition: 0.5s;
+    transition: 0.1s;
+    font-size:16px;
+    outline: none;
+    text-align: center;
+    background-color:white;
+  }
+
+  .select-criteria select:hover{
+    border: 3px solid orange;
+  }
+
+  .select-criteria input{
+    width: 200px;
+    height:34px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid white;
+    transition: 0.4s ease-in-out;
+    font-size:16px;
+    outline: none;
+    background-color:#1b2e35;
+    color:white;
+    text-align: center;
+  }
+
+  .select-criteria input:hover{
+    background-color:white;
+    color:#1b2e35;
+    cursor: pointer;
+    border: 5px solid #1b2e35;
+  }
+
+  .result-table p{
+    text-align: center;
+    font-size:20px;
+    margin:20px 100px 10px 100px;
+    padding:10px;
+    color:transparent;
+    font-style:oblique;
+  }
+
+  .result-table p::first-letter{
+    font-size:30px;
+  }
+
+  .result-table{
+    display:none;
+  }
+  .result-table h2{
+    padding:0px;
+    font-size:30px;
+    color: transparent;
+  }
+
+  #result-data{
+    padding:0px 100px;
+    font-size:30px;
+    color: transparent;
+  }
+
+  .result-table h2::first-letter{
+    font-size:40px;
+  }
+
+  .marks-table table{
+      border-collapse:collapse;
+      /* border:1px solid #1b2e35;   */
+      width:1250px;
+      height:auto;
+      text-align: center;
+      opacity:0;
+  }
+
+  .marks-table table th{
+    /* border:1px solid white;   */
+    text-align: center;
+    padding-left:0px;
+    font-size:22px;
+    height:50px;
+    background-color:#1b2e35;
+    color:white;
+  }
+
+  .marks-table table td{
+    /* border:1px solid white;   */
+    text-align: center;
+    padding-left:0px;
+    font-size:18px;
+    padding:10px;
+  }
+
+  .marks-table table tr:nth-child(even) { 
+    background-color: rgba(227, 240, 251); 
+} 
+
+
+#marks-table{
+  opacity:0;
+}
+
+
+@keyframes scroll-down-anim{
+  0%{
+    margin-top:-120px;
+    opacity:0;
+  }
+  100%{
+    margin-top:20px;
+    opacity:1;
+  }
+}
+
+.marks-table .scroll-anim h1 {
+  font-size:70px;
+  animation-name:scroll-down-anim;
+  rotate:180deg;
+  animation-duration:2s;
+  animation-delay:1s;
+  animation-iteration-count:infinite;
+}
+
+
+/* Gpa Calculation */
+
+#gpa-calc{
+  opacity:0;
+}
+
+.gpa-calculation{
+  margin-top:-100px;
+}
+
+.gpa-calculation h2{
+  padding:0px 100px;
+  font-size:30px;
+  color:#1b2e35;
+}
+
+
+.gpa-calculation h2::first-letter{
+  font-size:40px;
+}
+
+
+#gpa-calc-table{
+  opacity:0;
+}
+
+
+.footer{
+    background-color:whitesmoke;
+    height:42px;
+    margin:10px -7px 20px -10px;
+    color:black;
+    display:flex;
+    flex-direction:row;
+    font-family: 'Cabin Condensed', sans-serif;
+    padding-left:30px;
+    padding-right:20px;
+    font-size:12px;
+    justify-content:space-between;
+    font-size:18px;
+    font-weight:500;
+    letter-spacing:1px;
+}
+
+  /* Style the scrollbar track */
+  ::-webkit-scrollbar {
+    width:5px;
+  }
+
+  /* Style the scrollbar thumb */
+  ::-webkit-scrollbar-thumb {
+    background: transparent;
+  }
+
+  /* Style the scrollbar track on hover */
+  ::-webkit-scrollbar-track:hover {
+    background: rgba(0, 0, 0, 0.2);
+  }
+
+
+  body {
+    overflow-x: hidden;
+  }
+  
+    </style>
+</head>
+<body>
+<div class="header">
+        <div class="nav">
+            <table>
+                <tr>
+                    <td>
+                        <a href="">
+                            <img src="Wavy_Edu-05_Single-08.jpg"style="border-radius:50%;" width="35">  
+                        </a>
+                        &emsp14;
+                    </td>
+                    <td>
+                        <a href="">
+                            <h1>
+                                GradeHub
+                            </h1>
+                        </a>
+                    </td>
+                </tr>
+            </table>
+            <h1>
+                IIIT - ONGOLE RGUKT AP
+            </h1>
+        </div>
+    </div>
+    <br />
+    <div class="main">
+        <div class="select-criteria">
+            <h1>
+                # Select Criteria
+            </h1>
+            <table>
+                <tr>
+                    <th>
+                        <h2>
+                            Year
+                        </h2>
+                    </th>
+                    <th>
+                        <h2>
+                            Semester
+                        </h2>
+                    </th>
+                    <th>
+                        <h2>
+                            Exam
+                        </h2>
+                    </th>
+                    <th>
+                    </th>
+                </tr>
+                <tr>
+                    <th>
+                        <select id="year">
+                            <option>
+                                E1
+                            </option>
+                            <option>
+                                E2
+                            </option>
+                            <option>
+                                E3
+                            </option>
+                            <option>
+                                E4
+                            </option>
+                        </select>
+                    </th>
+                    <th>
+                        <select id="semester">
+                            <option>
+                                Semester - 1
+                            </option>
+                            <option>
+                                Semester - 2
+                            </option>
+                        </select>
+                    </th>
+                    <th>
+                        <input type="button" value="Fetch Results" id="result" onclick="search()">
+                    </th>
+                </tr>
+            </table>
+            <br />
+            <div class="result-table" id="srees-bot">
+                <p id="result-table">
+                    Sree's bot Successfully fetched your results...
+                </p>
+
+                <br />
+            </div>  
+            <h2 id="result-data"></h2>
+            <div class="marks-table">
+                    <table id="marks-table">
+                        <tr><th>S.no</th><th>Subjects</th><th>Mid - 1</th><th>Mid - 2</th><th>Mid - 3</th><th>BO2</th>  <th>Credits</th><th>Grade</th><td></td></tr>
+                        <tr><td>1.</td><td>Subject - 1</td><td>15</td><td>15</td><td>15</td><td>30</td>  <td>1  </td>   <td>Ex</td>  </tr>
+                        <tr><td>2.</td><td>Subject - 2</td><td>15</td><td>15</td><td>15</td><td>30</td>  <td>3  </td>   <td>Ex</td>  </tr>
+                        <tr><td>3.</td><td>Subject - 3</td><td>15</td><td>15</td><td>15</td><td>30</td>  <td>2.5</td>   <td>Ex</td>  </tr>
+                        <tr><td>4.</td><td>Subject - 4</td><td>15</td><td>15</td><td>15</td><td>30</td>  <td>4  </td>   <td>Ex</td>  </tr>
+                        <tr><td>5.</td><td>Subject - 5</td><td>15</td><td>15</td><td>15</td><td>30</td>  <td>3  </td>   <td>Ex</td>  </tr>                        
+                        <tr><td>6.</td><td>Subject - 6</td><td>15</td><td>15</td><td>15</td><td>30</td>  <td>3  </td>   <td>Ex</td>  </tr>
+                        <tr><td>7.</td><td>Subject - 7</td><td>15</td><td>15</td><td>15</td><td>30</td>  <td>2.5</td>   <td>Ex</td>  </tr>
+                        <tr><td>8.</td><td>Subject - 8</td><td>15</td><td>15</td><td>15</td><td>30</td>  <td>4  </td>   <td>Ex</td>  </tr>
+                        <tr><td>9.</td><td>Subject - 9</td><td>15</td><td>15</td><td>15</td><td>30</td>  <td>3  </td>   <td>Ex</td>  </tr>
+                        <tr style="height:200px;">
+                            <td colspan="10">
+                                <div class="scroll-anim" id="scroll-anim">
+                                    <h1>
+                                        ^
+                                    </h1>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+
+                <!-- Gpa Claculation  -->
+
+                <div class="gpa-calculation">
+                    <h2 id="gpa-calc">
+                       |  GPA Calculation
+                    </h2>
+                </div>
+                <br />
+                <div class="gpa-calc-table">
+                    <table id="gpa-calc-table">
+                        <tr><th>S.no</th><th>Subjects</th><th>Credits</th><th>Grades</th></tr>
+                        <tr><td>1.</td><td>Subject - 1</td><td>1  </td><td>Ex</td></tr>
+                        <tr><td>2.</td><td>Subject - 2</td><td>3  </td><td>Ex</td></tr>
+                        <tr><td>3.</td><td>Subject - 3</td><td>2.5</td><td>Ex</td></tr>
+                        <tr><td>4.</td><td>Subject - 4</td><td>4  </td><td>Ex</td></tr>
+                        <tr><td>5.</td><td>Subject - 5</td><td>3  </td><td>Ex</td></tr>                        
+                        <tr><td>6.</td><td>Subject - 6</td><td>3  </td><td>Ex</td></tr>
+                        <tr><td>7.</td><td>Subject - 7</td><td>2.5</td><td>Ex</td></tr>
+                        <tr><td>8.</td><td>Subject - 8</td><td>4  </td><td>Ex</td></tr>
+                        <tr><td>9.</td><td>Subject - 9</td><td>3  </td><td>Ex</td></tr>
+                        <tr><td colspan="2"> GPA : </td><td>24</td><td> 10.00</td></tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br /><br /><br />
+    <hr color="#1b2e35"/>
+    <div class="footer">
+        <p>
+            Copyright &copy; RGUKT - ONG
+        </p>
+        <p>
+            Made with &hearts; by Sree Charan
+        </p>
+    </div>
+
+</body>
+<script>
+    window.scrollTo(0,0)
+    function search(){
+        document.getElementById("srees-bot").style.display="none";
+        document.getElementById("srees-bot").style.display="block";
+        const year = document.getElementById("year").value
+        const semester = document.getElementById("semester").value
+        document.getElementById("result-data").innerHTML="  | " + year +"    /   "+ semester;
+        document.getElementById("gpa-calc").style.opacity=0;
+        document.getElementById("gpa-calc-table").style.opacity=0;
+        document.getElementById("marks-table").style.opacity=0;
+        document.getElementById("result-table").style.color="transparent";
+        document.getElementById("result-data").style.color="transparent";
+        document.getElementById("marks-table").style.transition="1ms";
+        document.getElementById("result-table").style.transition="1ms";
+        document.getElementById("result-data").style.transition="1ms";
+        document.getElementById("result-data").style.transition="1ms";
+        setTimeout(
+            function fadein(){
+                window.scrollTo(100,250)
+                setTimeout(
+                    function scroll(){
+                        window.scrollTo(100,350)
+                        document.getElementById("scroll-anim").style.display="block";
+                    },2000
+                )
+                setTimeout(
+                    function scroll(){
+                        document.getElementById("scroll-anim").style.display="none";
+                    },10000
+                )
+                document.getElementById("gpa-calc").style.opacity=1;
+                document.getElementById("gpa-calc-table").style.opacity=1;
+                document.getElementById("marks-table").style.opacity=1;
+                document.getElementById("marks-table").style.transition="2s";
+                document.getElementById("result-table").style.color="#1b2e35";
+                document.getElementById("result-table").style.transition="1s";
+                document.getElementById("result-data").style.color="#1b2e35";
+                document.getElementById("result-data").style.transition="2s";
+            },500
+        )
+    }
+</script>
+</html>

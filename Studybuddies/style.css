@@ -1,0 +1,282 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+
+body{
+    background-image:url(pencil.jpg);
+    background-position: justify;
+    background-size:auto;
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-attachment: scroll;
+}
+
+.head{
+color:black;
+font-family:Moon Dance;
+font-size:90px;
+text-align:left;
+margin-top:2px;
+transition-duration:0.4s;
+}
+.head:hover{
+    color:white;
+}
+
+
+.first1{
+    font-style: bold;
+    font-family: lemon milk;
+    margin-left:0%;
+    font-size: 20px;
+}
+
+
+
+.first1:hover{
+    float: initial;
+    font-size:22px;
+    color: black;
+    text-decoration:underline;
+
+}
+
+
+
+a{
+    text-decoration: none;
+    color: black;
+}
+.second{
+    background-color:yelow;
+    width: auto;
+    height: 800px;
+    margin-top:400px;
+
+
+}
+
+
+.img{
+    margin-left:630px;
+    margin-bottom: 200px;
+}
+
+
+img{
+    margin-left:0px;
+}
+
+
+.nav{
+    color: black;
+    font-family: lemon milk;
+    font-style: bold;
+    margin-top: 0px;
+    font-size: larger;
+}
+
+.nav:hover{
+    color: antiquewhite;
+    font-style: bold;
+    font-size: px;
+}
+
+table{
+    padding:1em;
+}
+
+
+
+.welcome{
+    font-family: brightside;
+     margin-left: 25cm;
+     text-decoration:bold;
+     font-size: 100px;
+    margin-top: 1cm;
+}
+.list{
+    margin-left: 20cm;
+    margin-top: 1cm;
+}
+
+
+.guys{
+    margin-left: 24cm;
+    text-decoration:bold;
+    font-size: 20px;
+    font-family:lemon milk;
+    margin-top: 1cm;
+}
+
+.txt{
+    font-family: lemon milk;
+     font-family: lemon milk;
+    margin-left: 24cm;
+     text-decoration:bold;
+     font-size: 20px;
+     font-family:lemon milk;
+    margin-top: 1cm;
+
+}
+
+
+
+.follow{
+    font-family: lemon milk;
+    margin-left: 24cm;
+     text-decoration:bold;
+     font-size: 20px;
+     font-family:lemon milk;
+    margin-top: 1cm;
+}
+
+.follow:hover{
+     float: initial;
+    font-size:22px;
+    color: black;
+    text-decoration:;
+}
+
+.e{
+    margin-left: 25cm;
+    background-color: rgb(71, 71, 0.5);
+    height: 450px;
+    width: 350px;
+    border-radius:1cm;
+}
+
+.img1{
+
+    height: 1000px;
+    width:1000px;
+    
+}
+
+
+.aboutus{
+
+font-family: lemon milk;
+font-size: 20px;
+
+
+}
+.img2{
+    margin-left: 1150px;
+}
+
+.learn{
+    margin-left: 500px;
+    margin-bottom:100px;
+    margin-top:0px;
+    width: 900px;
+}
+
+.year{
+    width:200px;
+    height:130px;
+    background-color:black;
+    border-radius: 1cm;
+    margin-top: 0px;
+    font-family: arial;
+    margin-left: 100px;
+    text-align: center;
+    padding: 1em;
+    font-size: 50px;
+    border-color:whitesmoke;
+    margin-left: 10px;
+    color: whitesmoke;
+    cursor:pointer;
+}
+
+.year:hover{
+    background-color: whitesmoke;
+    color: red;
+}
+
+.h1{
+ 
+    font-size: 90px;
+    margin-left:400px;
+
+}
+
+
+.table{
+    margin-left:5cm;
+}
+
+
+footer{
+    background-color:black;
+    color: whitesmoke;
+    padding: 2cm;
+    text-align: center;
+    font-size: 30px;
+    font-family:Fredoka One;
+    width:1250px;
+
+}
+
+.pointer{
+    cursor: pointer;
+}
+
+
+button{
+    cursor: pointer;
+}
+
+.mname{
+    color:white;
+    font-family:Moon Dance;
+    text-align: right;
+    font-size:200px;
+    transition:2s;
+}
+.mname:hover{
+    color:yellow;
+}
+
+button{
+    background-color: transparent;
+    border-color: transparent;
+}
+
+
+#top{
+    position:sticky;
+    top:0px;
+    background-image:url(pencil.jpg);
+
+}
+
+.top{
+    margin-left:1150px;
+}
+
+
+
+
+.course{
+    width:600px;
+    height:150px;
+    background-color:black;
+    border-radius: 1cm;
+    margin-top: 0px;
+    font-family:dyuthi;
+    margin-left:390px;
+    text-align: center;
+    font-size: 50px;
+    border-color:whitesmoke;
+    color: whitesmoke;
+    cursor:pointer;
+}
+
+.course:hover{
+    background-color: whitesmoke;
+    color: red;
+    border-color: black;
+}

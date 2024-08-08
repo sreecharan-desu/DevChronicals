@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Admin | Sign in </title>
+    <link rel="icon" href="admin-icon.png">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@300&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Cabin+Condensed:wght@600&display=swap');
+        body{
+        background-color:whitesmoke;
+        }
+
+        .header .nav{
+            height:60px;
+            margin:-10px -7px -10px -10px;
+            background-color:rgba(255,115,92,255);
+            color:white;
+            display:flex;
+            flex-direction:row;
+            font-family: 'Cabin Condensed', sans-serif;
+            padding:0px 30px 0px 20px;
+            font-size:12px;
+            justify-content:space-between;
+            text-transform:capitalize;
+            letter-spacing:2px;
+        }
+
+
+        .alert-danger{
+            margin:-10px -7px -10px -10px;
+            background-color:red;
+            color:white;
+            letter-spacing:1px;
+            text-align: center;
+            display:flex;
+            flex-direction:row;
+            justify-content:space-between;
+            display:none;
+            padding:20px;
+        }
+        .alert-positive{
+            margin:-10px -7px -10px -10px;
+            background-color:palegreen;
+            color:white;
+            letter-spacing:1px;
+            padding:20px;
+            text-align: center;
+            display:flex;
+            flex-direction:row;
+            justify-content:space-around;
+            display:none;
+        }
+        .main{
+            background-color:white;
+            height:78vh;
+        }
+
+        .main img{
+            margin-top:-60px;
+        }
+
+        .main p{
+            width:250px;
+            margin-left:-400px;
+        }
+        .main ul{
+            line-height:24px;
+            letter-spacing:2px;
+            text-transform:uppercase;
+        }
+
+        a{
+            text-decoration:none;
+            color:white;
+        }
+        #submit{
+            background-color:#E0F1FF;
+            width:150px;
+            transition:0.4s ease-in-out;
+        }
+
+        #submit:hover{
+            background-color:#364662;
+            color:white;
+            cursor: pointer;
+        }
+        .main .site-info{
+            background-color:white;
+            margin:250px 0px 100px 50px;
+            width:600px;
+            height:200px;
+            background-color:rgba(255,115,92,255);
+            font-family: 'Cabin Condensed', sans-serif;
+            letter-spacing:2px;
+            color:white;
+            padding:20px;
+            font-size:16px;
+            line-height:20px;
+            text-transform:capitalize;
+            font-weight:900;
+            margin-left:150px;
+            display:flex;
+            flex-direction: row;
+            justify-content:space-between;
+
+        }
+        .main .login-box{
+            background-color:rgba(255,115,92,255);
+            width:350px;
+            height:300px;
+            font-family: 'Cabin Condensed', sans-serif;
+            color:white;
+            padding:20px;
+            font-size:16px;
+            line-height:20px;
+            text-transform:capitalize;
+            font-weight:900;
+            margin:-120px 0px 0px -100px;    
+            box-shadow:-2px 0px 5px rgba(255,115,92,255);
+            float:inline-end;
+            letter-spacing:3px;
+            text-transform:uppercase;
+        }
+        .main input[type=password]{
+            width: 300px;
+            height:34px;
+            padding: 12px 20px;
+            margin: 8px 0;
+            box-sizing: border-box;
+            border: 3px solid transparent;
+            -webkit-transition: 0.5s;
+            transition: 0.5s;
+            outline: none;
+        }
+
+        ::placeholder {
+            color:#364662;
+            opacity: 1; /* Firefox */
+          }
+
+        .main input[type=email] {
+            width: 300px;
+            height:34px;
+            padding: 12px 20px;
+            margin: 8px 0;
+            box-sizing: border-box;
+            border: 3px solid transparent;
+            -webkit-transition: 0.5s;
+            transition: 0.5s;
+            outline: none;
+          }
+
+        .main input[type=submit] {
+            width: 300px;
+            height:34px;
+            margin: 8px 0;
+            box-sizing: border-box;
+            border: 3px solid transparent;
+            -webkit-transition: 0.5s;
+            transition: 0.5s;
+            font-size:16px;
+            outline: none;
+          }
+
+        .main input[type=email]:focus {
+            border: 3px solid #364662;
+          }
+
+        .main input[type=password]:focus {
+            border: 3px solid #364662;
+          }
+
+        .footer{
+            background-color:rgba(255,115,92,255);
+            height:42px;
+            margin:-10px -7px -10px -10px;
+            color:white;
+            display:flex;
+            flex-direction:row;
+            font-family: 'Cabin Condensed', sans-serif;
+            padding-left:30px;
+            padding-right:20px;
+            font-size:12px;
+            justify-content:space-between;
+            font-size:18px;
+            padding-bottom:20px;
+            font-weight:500;
+            letter-spacing:1px;
+        }
+  /* Style the scrollbar track */
+  ::-webkit-scrollbar {
+    width:5px;
+  }
+
+  /* Style the scrollbar thumb */
+  ::-webkit-scrollbar-thumb {
+    background: transparent;
+  }
+
+  /* Style the scrollbar track on hover */
+  ::-webkit-scrollbar-track:hover {
+    background: rgba(0, 0, 0, 0.2);
+  }
+
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="nav">
+            <table>
+                <tr>
+                    <td>
+                        <a href="">
+                            <img src="admin-icon.png" width="45">  
+                        </a>
+                        &emsp14;
+                    </td>
+                    <td>
+                        <a href="">
+                            <h1>
+                                Admin Portal
+                            </h1>
+                        </a>
+                    </td>
+                </tr>
+            </table>
+            <h1>
+                IIIT - ONGOLE RGUKT AP
+            </h1>
+        </div>
+    </div>
+    <div class="alert-danger" id="alert-danger">
+        <strong>
+            Danger!  You have entered the wrong credentials ! Try again.
+        </strong>
+    </div>
+    <div class="alert-positive" id="alert-positive">
+        <strong>
+            Successfully Logged In :)
+        </strong>
+    </div>
+    <br />
+    <div class="main">
+        <div class="content" id="content">
+            <table>
+                <tr>
+                    <td>
+                        <div class="img">
+                            <img src="12832654_5097611.jpg" width="500" height="500"> 
+                        </div>
+                    </td>
+                    <td>
+                        <div class="site-info" id="site-info">
+                            <p>
+                                <ul type ="none">
+                                    <li style="text-transform:uppercase; font-size:20px; margin-left:-40px; margin-bottom:10px;">
+                                     #Admin
+                                    </li>
+                                    <ul  type ="none" style="font-size:12px; margin-left:-65px;">
+                                        <li>
+                                            Review 
+                                        </li>
+                                        <li>
+                                            > Mess Feedback
+                                        </li>
+                                        <li>
+                                            > Student's Complaints
+                                       </li>
+                                        <li>
+                                            > Student's Outpass
+                                        </li>
+                                        <li>
+                                            > Student Profile
+                                        </li>
+                                    </ul>
+                                </ul>
+                            </p>
+                            <div class="login-box" id="login-box">
+                                <fomr method="POST" style="font-size:18px;">
+                                    <h2>
+                                        LOGIN PORTAL
+                                    </h2>
+                                    <label style="font-size:12px;"  for="id"> Your Emial Id : </label>
+                                    <br />
+                                    <input type="email" length="7"id="id" placeholder="admin@rguktong.ac.in">
+                                    <br />
+                                    <label style="font-size:12px;" for="pass"> Your Pass : </label>
+                                    <br />
+                                    <input type="password" length="10" id="pass" placeholder="Password">
+                                    <br />
+                                    <br />
+                                    <input type="submit" value="Log In" id="submit" onclick="submit()"> 
+                                </fomr>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <br />
+    <div class="footer">
+        <p>
+            Copyright &copy; RGUKT - ONG
+        </p>
+        <p>
+            Made with &hearts; by Sree Charan
+        </p>
+    </div>
+</body>
+<script>
+    window.scrollTo(0,0)
+
+    function submit(){
+        // Validation Process
+        value = 1;
+        if (value == 1){
+            document.getElementById("alert-positive").style.display="block";
+            document.getElementById("alert-positive").style.transition="0.4s"; 
+            setTimeout(
+                function success(){
+                    location.href="Admin.html";
+                },1000
+            )
+        }
+        else{
+            document.getElementById("alert-danger").style.display="block";
+            document.getElementById("alert-danger").style.transition="0.4s";
+        }
+    }
+</script>
+</html>

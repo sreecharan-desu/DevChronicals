@@ -1,0 +1,39 @@
+body{
+    background-color: rgb(203, 231, 222);
+    color: rgb(241, 190, 80);
+}
+
+h1{
+    text-align: center;
+    font-family: dyuthi;
+    font-size: 50px;
+    text-decoration: underline;
+}
+
+
+.about{
+    font-size: 20px;
+    font-family:arial;
+    color: black;
+}
+
+.thanks{
+    color: black;
+    font-size: 40px;
+    text-align: center;
+}
+
+
+.name{
+    color:black;
+    font-size: 80px;
+    font-family: brightside;
+    text-align: right;
+    margin-right: 90px;
+    transition:2s;
+}
+
+.name:hover{
+    color: black;
+
+}

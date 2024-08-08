@@ -1,0 +1,1277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Outpass | Student</title>
+    <link rel="icon" href="student_icon.png">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cabin+Condensed:wght@600&display=swap');
+body{
+    background-color:whitesmoke;
+}
+*{
+    font-family: 'Cabin Condensed', sans-serif;
+    letter-spacing:2px;
+}
+html{
+    scroll-behavior:smooth;
+}
+a{
+    text-decoration:none;
+    color:white;
+}
+
+.header{
+    top:0px;
+    position:sticky;
+}
+.header .nav{
+    height:60px;
+    margin:-10px -10px -10px -10px;
+    background-color:#1b2e35;
+    color:white;
+    display:flex;
+    flex-direction:row;
+    font-family: 'Cabin Condensed', sans-serif;
+    padding:0px 30px 0px 20px;
+    font-size:12px;
+    justify-content:space-between;
+    text-transform:capitalize;
+    letter-spacing:2px;
+
+}
+
+.header h1{
+    font-style:oblique;
+}
+
+
+.main h1{
+    font-size:50px;
+    padding:0px 100px;
+}
+
+.main h1::first-letter{
+    font-size:60px;
+}
+
+
+.main h2{
+    padding:0px 100px;
+    font-size:40px;
+    opacity:0;
+    margin:-90px 0px 0px -400px;
+}
+
+.main .h3{
+    padding:0px 100px;
+    font-size:40px;
+    color:#1b2e35;
+}
+
+
+.rules{
+    background-color:white;
+    margin:0px 100px;
+    width:85vw;
+    height:50vh;
+    border-radius:10px;
+    display:flex;
+    flex-direction:row;
+    justify-content:space-around;
+    align-items:center;
+}
+
+.options{
+    display: flex;
+    flex-direction:row;
+    justify-content:center;
+}
+
+.pr{
+    width:250px;
+    height:250px;
+    border-radius:50%;
+    border:5px solid white;
+}
+.outing{
+    text-align: center;
+    width:250px;
+    height:290px;
+    border-radius:10px;
+    background-color:#1b2e35;
+    padding:50px 50px 50px 50px;
+    float:left;
+    transition:0.4s ease;
+    margin:10px;
+}
+
+.outing .pr{
+    background-image:url("12067486_4891584.jpg");
+    background-size:cover;
+}
+
+.outing h1{
+    margin-top:200px;
+    font-style:oblique;
+}
+
+.outing:hover{
+    box-shadow:2px 2px 5px #1b2e35;
+    cursor:pointer;
+}
+
+.outing h1{
+    margin-top:10px;
+    font-style:oblique;
+    color:white;
+    margin-left:-20px;
+}
+.outing h1::first-letter{
+    font-size:40px;
+}
+
+
+
+.outing-body{
+    padding:50px 0px -0px 50px;
+}
+
+.outing-body form{
+    font-size:20px;
+}
+
+.outing-main{
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    background-color:white;
+    margin:0px 100px;
+    width:85vw;
+    height:auto;
+    border-radius:10px;
+    display:none;
+}
+
+
+.outing-main p{
+    padding:50px;
+    font-size:24px;
+}
+
+.outing-main a{
+    color:orange;
+    cursor: pointer;
+}
+
+
+.outing-main h1{
+    padding:50px;
+}
+
+.outing-main .outing-body{
+    width:75vw;
+    height:auto;
+    background-color:whitesmoke;
+    margin:-50px 50px;
+    border-radius:10px;
+}
+
+
+.outing-main .outing-body input[type=text] {
+    width: 800px;
+    height:34px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border-bottom: 3px solid #364662;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+  }
+
+.outing-main .outing-body input[type=text]:focus {
+    border: 3px solid #364662;
+  }
+
+
+.outing-main .outing-body input[type=tel] {
+    width: 300px;
+    height:34px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border-bottom: 3px solid #364662;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+  }
+
+.outing-main .outing-body input[type=date] {
+    width: 300px;
+    height:34px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 3px solid transparent;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    font-size:16px;
+    outline: none;
+  }
+.outing-main .outing-body input[type=tel]:focus {
+    border: 3px solid #364662;
+  }
+
+.outing-main .outing-body input[type=date]:focus {
+    border: 3px solid #364662;
+  }
+
+.outing-main .outing-body input[type=textarea] {
+    width:700px;
+    height:54px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 3px solid #1b2e35;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+  }
+
+.outing-main .outing-body input[type=textarea]:focus {
+    border: 3px solid #364662;
+  }
+
+
+
+
+
+
+
+
+
+
+
+/* Outpass */
+
+
+.outpass{
+    width:250px;
+    height:290px;
+    border-radius:10px;
+    background-color:#1b2e35;
+    padding:50px 50px 50px 50px;
+    float:left;
+    transition:0.4s ease;
+    margin:10px;
+}
+
+.outpass .pr{
+    background-image:url("8934917.jpg");
+    background-size:cover;
+}
+
+
+.outpass h1{
+    margin-top:200px;
+    font-style:oblique;
+    margin-left:-40px;
+}
+.outpass:hover{
+    box-shadow:2px 2px 5px #1b2e35;
+    cursor:pointer;
+}
+
+.outpass h1{
+    margin-top:10px;
+    font-style:oblique;
+    color:white;
+}
+.outpass h1::first-letter{
+    font-size:40px;
+}
+
+
+/* Outpass-main */
+
+
+
+.outpass-main p{
+    padding:50px;
+    font-size:24px;
+}
+
+.outpass-main a{
+    color:orange;
+    cursor: pointer;
+}
+
+.outpass-body{
+    padding:50px 0px -0px 50px;
+}
+
+.outpass-body form{
+    font-size:20px;
+}
+
+.outpass-main{
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    background-color:white;
+    margin:0px 100px;
+    width:85vw;
+    height:auto;
+    border-radius:10px;
+    display:none;
+}
+
+
+.outpass-main p{
+    padding:50px;
+    font-size:24px;
+}
+
+.outpass-main a{
+    color:orange;
+    cursor: pointer;
+}
+
+
+.outpass-main h1{
+    padding:50px;
+}
+
+.outpass-main .outpass-body{
+    width:75vw;
+    height:auto;
+    background-color:whitesmoke;
+    margin:-50px 50px;
+    border-radius:10px;
+}
+
+
+.outpass-body input[type=text] {
+    width: 800px;
+    height:34px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border-bottom: 3px solid #364662;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+  }
+
+.outpass-body input[type=text]:focus {
+    border: 3px solid #364662;
+  }
+
+input[type=password]{
+    width: 300px;
+    height:34px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 3px solid transparent;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+}
+
+::placeholder {
+    color:#364662;
+    opacity: 1; /* Firefox */
+  }
+
+
+input[type=submit] {
+    width: 300px;
+    height:34px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 3px solid transparent;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    font-size:16px;
+    outline: none;
+  }
+
+input[type=password]:focus {
+    border: 3px solid #364662;
+  }
+
+
+.outpass-main .outpass-body input[type=tel] {
+    width: 300px;
+    height:34px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border-bottom: 3px solid #364662;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+  }
+
+  .outpass-main .outpass-body input[type=date] {
+    width: 300px;
+    height:34px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 3px solid transparent;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    font-size:16px;
+    outline: none;
+  }
+  .outpass-main .outpass-body input[type=tel]:focus {
+    border: 3px solid #364662;
+  }
+
+  .outpass-main .outpass-body input[type=date]:focus {
+    border: 3px solid #364662;
+  }
+
+  .outpass-main .outpass-body input[type=textarea] {
+    width:700px;
+    height:54px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 3px solid #1b2e35;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+  }
+
+  .outpass-main .outpass-body input[type=textarea]:focus {
+    border: 3px solid #364662;
+  }
+
+/* General Input Styling */
+
+
+input[type=password]{
+    width: 300px;
+    height:34px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 3px solid transparent;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+}
+
+::placeholder {
+    color:#364662;
+    opacity: 1; /* Firefox */
+  }
+
+input[type=text] {
+    width: 300px;
+    height:34px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 3px solid transparent;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+  }
+
+input[type=button] {
+    width: 300px;
+    height:34px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 3px solid #1b2e35;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    font-size:16px;
+    outline: none;
+    margin-left:350px;
+    background-color:white;
+  }
+
+input[type=button]:hover {
+    width: 300px;
+    height:34px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 5px solid orange;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    font-size:16px;
+    outline: none;
+    background-color:#1b2e35;
+    color:white;
+    margin-left:350px;
+    cursor:pointer;
+  }
+
+input[type=text]:focus {
+    border: 3px solid #364662;
+  }
+
+input[type=password]:focus {
+    border: 3px solid #364662;
+  }
+
+
+  input[type=tel] {
+    width: 300px;
+    height:34px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 3px solid transparent;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+  }
+
+input[type=time] {
+    width: 300px;
+    height:34px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 3px solid transparent;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    font-size:16px;
+    outline: none;
+  }
+input[type=time]:focus {
+    border: 3px solid #364662;
+  }
+
+#parent-option1,#parent-option2,#parent-option3{
+    display:none;
+}
+
+#parent-option1-outp,#parent-option2-outp,#parent-option3-outp{
+    display:none;
+}
+
+.footer{
+    background-color:white;
+    height:42px;
+    margin:-10px -7px -10px -10px;
+    color:black;
+    display:flex;
+    flex-direction:row;
+    font-family: 'Cabin Condensed', sans-serif;
+    padding-left:30px;
+    padding-right:20px;
+    font-size:12px;
+    justify-content:space-between;
+    font-size:18px;
+    padding-bottom:20px;
+    font-weight:500;
+    letter-spacing:1px;
+    float:bottom;
+}
+  /* Style the scrollbar track */
+  ::-webkit-scrollbar {
+    width:5px;
+  }
+
+  /* Style the scrollbar thumb */
+  ::-webkit-scrollbar-thumb {
+    background: transparent;
+  }
+
+  /* Style the scrollbar track on hover */
+  ::-webkit-scrollbar-track:hover {
+    background: rgba(0, 0, 0, 0.2);
+  }
+
+
+  /*Alerts */
+
+
+.alert-danger{
+    margin:-10px -7px -10px -10px;
+    background-color:red;
+    width:100%;
+    color:white;
+    letter-spacing:1px;
+    text-align: center;
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+    display:none;
+    padding:20px;
+}
+.alert-positive{
+    margin:-10px -7px -10px -10px;
+    background-color:palegreen;
+    color:white;
+    letter-spacing:1px;
+    padding:20px;
+    text-align: center;
+    display:flex;
+    flex-direction:row;
+    justify-content:space-around;
+    display:none;
+}
+/*Alerts Over*/
+</style>
+</head>
+<body>
+<div class="header">
+        <div class="nav">
+            <table>
+                <tr>
+                    <td>
+                        <a href="">
+                            <img src="8934917.jpg"style="border-radius:50%;" width="35">  
+                        </a>
+                        &emsp14;
+                    </td>
+                    <td>
+                        <a href="">
+                            <h1>
+                                Outpass
+                            </h1>
+                        </a>
+                    </td>
+                </tr>
+            </table>
+            <h1>
+                IIIT - ONGOLE RGUKT AP
+            </h1>
+        </div>
+    </div>
+    <br />
+    <div class="main">
+        <h1 id="hi" style="opacity:0;">
+            Hi,
+            <br />
+            O210008
+        </h1>
+        <h3 class="h3">
+            |
+        </h3>
+        <h2 id="rules">
+            Rules & Regulations
+        </h2>
+        <br /><br />
+        <div class="rules">
+            Will update Soon...
+        </div>
+        <br /><br />    <br /><br />
+        <h2 id="heading">
+            # Choose One
+        </h2>
+        <div class="options">
+                <div class="outing" onclick="outing()" id="outing">
+                    <div class="pr"></div>
+                    <h1>
+                        Outing
+                    </h1>
+                </div>
+                <div class="outpass" id="outpass" onclick="outpass()">
+                    <div class="pr"></div>
+                    <h1>
+                        Outpass
+                    </h1>
+                </div>
+        </div>
+        <div class="outing-main" id="outing-main">
+
+            <h1>
+                #Request for Outing
+            </h1>
+
+            <table>
+                <tr>
+                    <td>
+                        <div class="outing-body">
+                            <form>
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <label for="name">
+                                               * Enter your name : 
+                                            </label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input type="text" placeholder="Enter your name" id="branch"> 
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <label for="branch">
+                                                   * Select your branch :  
+                                            </label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <br />
+                                            <label>
+                                                <input type="radio" name="branch" value="CSE"> CSE
+                                              </label>
+                                              <br />
+                                              <label>
+                                                <input type="radio" name="branch" value="ECE"> ECE
+                                              </label>
+                                              <br />
+                                              <label>
+                                                <input type="radio" name="branch" value="MECH"> MECH
+                                              </label>
+                                              <br />
+                                              <label>
+                                                <input type="radio" name="branch" value="CIVIL"> CIVIL
+                                              </label>
+                                              <br />
+                                              <label>
+                                                <input type="radio" name="branch" value="EEE"> EEE
+                                              </label>
+                                                <br /> 
+                                            </td>
+                                        </tr>
+                                            <tr>
+                                                <td>
+                                                    <label for="section">
+                                                        <br />
+                                                       * Select your Section :  
+                                                    </label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <label>
+                                                        <input type="radio" name="section" value="Section - 1"> Section - 1
+                                                      </label><br>
+                                                      
+                                                      <label>
+                                                        <input type="radio" name="section" value="Section - 2"> Section - 2
+                                                      </label><br>
+                                                      
+                                                      <label>
+                                                        <input type="radio" name="section" value="Section - 3"> Section - 3
+                                                      </label><br>
+                                                      
+                                                      <label>
+                                                        <input type="radio" name="section" value="Section - 4"> Section - 4
+                                                      </label><br>
+                                                      
+                                                </td>
+                                            </tr>
+                                                <tr>
+                                                    <td>
+                                                        <label for="pname">
+                                                            <br />
+                                                           * Your Phone Number : 
+                                                        </label>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <input type="tel" id="pname" maxlength="10" placeholder="Enter phone number">  
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <br />
+                                                        <label for="person">
+                                                            * Are you going along with your Relatives / friends ?
+                                                        </label>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <label>
+                                                            <input type="radio" name="person" value="1" id="parent-confirmation" onclick="p_conf_y()">Yes
+                                                        </label><br>
+                                                          
+                                                        <label>
+                                                            <input type="radio" name="person" value="0" onclick="p_conf_n()">No
+                                                        </label>
+                                                        <br>
+                                                        <br />
+                                                    </td>
+                                                </tr>
+                                                <tr id="parent-option1">
+                                                    <td>
+                                                        <label for="parentname">
+                                                            * Enter his / her name : 
+                                                            <br />
+                                                            <input type="text" id="parentname" placeholder="Enter his/her name">
+                                                        </label>
+                                                    </td>
+                                                </tr>
+                                                <tr id="parent-option2">
+                                                    <td>
+                                                        <label for="parentname">
+                                                            * Your relation with his /her : 
+                                                            <br />
+                                                            <input type="text" id="parentname" placeholder="Relation">
+                                                        </label>
+                                                    </td>
+                                                </tr>
+                                                <tr id="parent-option3">
+                                                    <td>
+                                                        <label for="parentsname">
+                                                            <br />
+                                                           * His / Her Phone Number : 
+                                                           <br />
+                                                           <input type="tel" id="parentsname" maxlength="10" placeholder="Phone number">  
+                                                        </label>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <label for="reason">
+                                                            * Tell me the Reason (Should be Valid) : 
+                                                        </label>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <input type="textarea" id="reason" rows="20" cols="20" placeholder="Reason"> 
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <label for="name">
+                                                        * Duration (Should not exceed 3 hrs):  
+                                                    </label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <br />
+                                                    <label>
+                                                        <input type="radio" name="time" value="1 hour"> 1 hour
+                                                      </label><br>
+                                                      
+                                                      <label>
+                                                        <input type="radio" name="time" value="2 hours"> 2 hours
+                                                      </label><br>
+                                                      
+                                                      <label>
+                                                        <input type="radio" name="time" value="3 hours"> 3 hours
+                                                      </label><br>
+                                                      <br />
+                                                      <label for="from">
+                                                        From
+                                                        <input type="time" id="from" name="time">
+                                                      </label>
+                                                      <label for="to">
+
+                                                         to 
+                                                        <input type="time" id="to" name="time">
+                                                      </label><br />
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="4">
+                                                    <br />
+                                                    <input type="button" value="Send request" id="submit" onclick="submit_request()">
+                                                    <br />
+                                                    <br />
+                                                </td>
+                                            </tr>
+                                </table>
+                            </form>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+            <br />
+            <br />
+            <br />
+            <div class="alert-danger" id="danger">
+                <strong>
+                    There's an error in submitting your request! Please try again.
+                </strong>
+            </div>
+            <div class="alert-positive" id="positive">
+                <strong>
+                    Successfully Submitted 
+                </strong>
+            </div>
+            <p>
+                Changed your mind ? Wanna take Outpass Instead Outing ! Click <a id="c-decision-outpass" onclick="c_decision_outpass()"> here. </a>
+            </p>
+        </div>
+        <div class="outpass-main" id="outpass-main">
+
+            <h1>
+                #Request for Outpass
+            </h1>
+
+            <table>
+                <tr>
+                    <td>
+                        <div class="outpass-body">
+                            <form>
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <label for="name">
+                                               * Enter your name : 
+                                            </label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input type="text" id="branch" placeholder="Enter your name"> 
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <label for="branch">
+                                                   * Select your branch :  
+                                            </label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <br />
+                                            <label>
+                                                <input type="radio" name="branch" value="CSE"> CSE
+                                              </label>
+                                              <br />
+                                              <label>
+                                                <input type="radio" name="branch" value="ECE"> ECE
+                                              </label>
+                                              <br />
+                                              <label>
+                                                <input type="radio" name="branch" value="MECH"> MECH
+                                              </label>
+                                              <br />
+                                              <label>
+                                                <input type="radio" name="branch" value="CIVIL"> CIVIL
+                                              </label>
+                                              <br />
+                                              <label>
+                                                <input type="radio" name="branch" value="EEE"> EEE
+                                              </label>
+                                                <br /> 
+                                            </td>
+                                        </tr>
+                                            <tr>
+                                                <td>
+                                                    <label for="section">
+                                                        <br />
+                                                       * Select your Section :  
+                                                    </label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <label>
+                                                        <input type="radio" name="section" value="Section - 1"> Section - 1
+                                                      </label><br>
+                                                      
+                                                      <label>
+                                                        <input type="radio" name="section" value="Section - 2"> Section - 2
+                                                      </label><br>
+                                                      
+                                                      <label>
+                                                        <input type="radio" name="section" value="Section - 3"> Section - 3
+                                                      </label><br>
+                                                      
+                                                      <label>
+                                                        <input type="radio" name="section" value="Section - 4"> Section - 4
+                                                      </label><br>
+                                                      
+                                                </td>
+                                            </tr>
+                                                <tr>
+                                                    <td>
+                                                        <label for="pname">
+                                                            <br />
+                                                           * Your Phone Number : 
+                                                        </label>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <input type="tel" id="pname" maxlength="10" placeholder="Phone number">  
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <br />
+                                                        <label for="person">
+                                                            * Are you going along with your Relatives / friends ?
+                                                        </label>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <label>
+                                                            <input type="radio" name="person" value="1" onclick="p_conf_y_outp()">Yes
+                                                        </label><br>
+                                                          
+                                                        <label>
+                                                            <input type="radio" name="person" value="0" onclick="p_conf_n_outp()">No
+                                                        </label>
+                                                        <br>
+                                                        <br />
+                                                    </td>
+                                                </tr>
+                                                <tr id="parent-option1-outp">
+                                                    <td>
+                                                        <label for="parentname">
+                                                            * Enter his / her name : 
+                                                            <br />
+                                                            <input type="text" id="parentname" placeholder="his / her name">
+                                                        </label>
+                                                    </td>
+                                                </tr>
+                                                <tr id="parent-option2-outp">
+                                                    <td>
+                                                        <label for="parentname">
+                                                            * Your relation with his /her : 
+                                                            <br />
+                                                            <input type="text" id="parentname" placeholder="Relation">
+                                                        </label>
+                                                    </td>
+                                                </tr>
+                                                <tr id="parent-option3-outp">
+                                                    <td>
+                                                        <label for="parentsname">
+                                                            <br />
+                                                           * His / Her Phone Number : 
+                                                           <br />
+                                                           <input type="tel" id="parentsname" maxlength="10" placeholder="Phone number">  
+                                                        </label>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <label for="reason">
+                                                            * Tell me the Reason (Should be Valid) : 
+                                                        </label>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <input type="textarea" id="reason" rows="20" cols="20" placeholder="Reason"> 
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <label for="name">
+                                                        * Duration (Should not exceed 5 days):  
+                                                    </label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <br />
+                                                    <label>
+                                                        <input type="radio" name="days" value="1 day"> 1 days
+                                                      </label><br>
+                                                      
+                                                      <label>
+                                                        <input type="radio" name="days" value="2 days"> 2 days
+                                                      </label><br>
+                                                      
+                                                      <label>
+                                                        <input type="radio" name="days" value="3 days"> 3 days
+                                                      </label><br>
+
+                                                      <label>
+                                                        <input type="radio" name="days" value="4 days"> 4 days
+                                                      </label><br>
+                                                      <br />
+                                                      <label for="from">
+                                                        From
+                                                        <input type="time" id="from" name="time">
+                                                      </label>
+                                                      <label for="to">
+
+                                                         to 
+                                                        <input type="time" id="to" name="time">
+                                                      </label><br />
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="4">
+                                                    <br />
+                                                    <input type="button" value="Send request" id="submit" onclick="submit_request_outp()">
+                                                    <br />
+                                                    <br />
+                                                </td>
+                                            </tr>
+                                </table>
+                            </form>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+            <br />
+            <br />
+            <br />
+            <div class="alert-danger" id="danger-outp">
+                <strong>
+                    There's an error in submitting your request! Please try again.
+                </strong>
+            </div>
+            <div class="alert-positive" id="positive-outp">
+                <strong>
+                    Successfully Submitted 
+                </strong>
+            </div>
+            <p>
+                Changed your mind ? Wanna go for Outing Instead Outpass ! Click <a id="c-decision-outing" onclick="c_decision_outing()"> here. </a>
+            </p>
+        </div>
+    </div>
+    <br /><br />
+    <div class="footer">
+        <p>
+            Copyright &copy; RGUKT - ONG
+        </p>
+        <p>
+            Made with &hearts; by Sree Charan
+        </p>
+    </div>
+</body>
+<script>
+    function p_conf_y(){
+        document.getElementById("parent-option1").style.display="block";
+        document.getElementById("parent-option2").style.display="block";
+        document.getElementById("parent-option3").style.display="block";
+
+    }
+    function p_conf_n(){
+        document.getElementById("parent-option1").style.display="none";
+        document.getElementById("parent-option2").style.display="none";
+        document.getElementById("parent-option3").style.display="none";
+    }
+
+    function p_conf_y_outp(){
+        document.getElementById("parent-option1-outp").style.display="block";
+        document.getElementById("parent-option2-outp").style.display="block";
+        document.getElementById("parent-option3-outp").style.display="block";
+
+    }
+    function p_conf_n_outp(){
+        document.getElementById("parent-option1-outp").style.display="none";
+        document.getElementById("parent-option2-outp").style.display="none";
+        document.getElementById("parent-option3-outp").style.display="none";
+    }
+    window.scrollTo(0,0);
+    document.getElementById("hi").style.opacity=1;
+    document.getElementById("hi").style.transition="2s";
+
+    setTimeout(
+        function r_anim(){
+            document.getElementById("rules").style.margin="-85px 0px 0px 10px";
+            document.getElementById("rules").style.opacity=1;
+            document.getElementById("rules").style.transition="0.4s";
+        }
+    )
+
+    function outing(){
+        document.getElementById("outing").style.display="none";
+        document.getElementById("outpass").style.display="none";
+        document.getElementById("heading").innerHTML="#Request for Outing";
+        document.getElementById("outing-main").style.display="block";
+        document.getElementById("outing-main").style.opacity=0;
+        document.getElementById("outing-main").style.opacity=1;
+        document.getElementById("outing-main").style.transition="2s";
+    }
+
+
+    function outpass(){
+        document.getElementById("outing").style.display="none";
+        document.getElementById("outpass").style.display="none";
+        document.getElementById("heading").innerHTML="#Request for Outpass";
+        document.getElementById("outpass-main").style.display="block";
+        document.getElementById("outpass-main").style.opacity=0;
+        document.getElementById("outpass-main").style.opacity=1;
+        document.getElementById("outpass-main").style.transition="2s";
+    }
+
+    function c_decision_outpass(){
+        document.getElementById("outing").style.display="none";
+        document.getElementById("outpass").style.display="none";
+        document.getElementById("outing-main").style.display="none";
+        document.getElementById("heading").innerHTML="#Outpass";
+        document.getElementById("outpass-main").style.display="block";
+        document.getElementById("outpass-main").style.transition="2s";
+    }
+
+    function c_decision_outing(){
+        document.getElementById("outing").style.display="none";
+        document.getElementById("outpass").style.display="none";
+        document.getElementById("outpass-main").style.display="none";
+        document.getElementById("heading").innerHTML="#Outing";
+        document.getElementById("outing-main").style.display="block";
+        document.getElementById("outing-main").style.transition="2s";
+    }
+
+
+    function submit_request(){
+        //Backend Actions
+        value = 1;
+        if (value == 1){
+            document.getElementById("positive").style.display="block";
+            document.getElementById("positive").style.transition="0.4s";
+            setTimeout(
+                function further(){
+                    location.href="outpass-student.html"
+                },3000
+            )
+            setTimeout(
+                function further(){
+                    window.scrollTo(100,600);
+                },1000
+            )
+        }
+        else{
+            document.getElementById("danger").style.display="block";
+            document.getElementById("danger").style.transition="0.4s"; 
+            setTimeout(
+                function further(){
+                    window.scrollTo(100,600);
+                },1000
+            )
+            
+        }
+    }
+
+
+    function submit_request_outp(){
+        //Backend Actions
+        value = 1;
+        if (value == 1){
+            document.getElementById("positive-outp").style.display="block";
+            document.getElementById("positive-outp").style.transition="0.4s";
+            setTimeout(
+                function further(){
+                    location.href="outpass-student.html"
+                },3000
+            )
+            setTimeout(
+                function further(){
+                    window.scrollTo(100,600);
+                },1000
+            )
+        }
+        else{
+            document.getElementById("danger-outp").style.display="block";
+            document.getElementById("danger-outp").style.transition="0.4s"; 
+            setTimeout(
+                function further(){
+                    window.scrollTo(100,600);
+                },1000
+            )
+            
+        }
+    }
+</script>
+</html>

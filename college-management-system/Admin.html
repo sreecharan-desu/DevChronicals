@@ -1,0 +1,948 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Student </title>
+    <link rel="icon" href="admin-icon.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="header">
+        <div class="nav">
+            <table>
+                <tr>
+                    <td>
+                        <a href="">
+                            <img src="admin-icon.png" width="55">  
+                        </a>
+                        &emsp14;
+                    </td>
+                    <td>
+                        <a href="">
+                            <h1>
+                                Admin Portal
+                            </h1>
+                        </a>
+                    </td>
+                </tr>
+            </table>
+            <h1>
+                IIIT - ONGOLE RGUKT AP
+            </h1>
+        </div>
+    </div>
+    <br />
+    <div class="main">
+        <div class="p-info">
+            <div class="profile"></div>
+        <div class="welcome">
+            <table>
+                    <tr>
+                        <td>
+                            <h1>
+                                Welcome,
+                            </h1>
+                        </td>
+                        <td colspan="2">
+                            <h2 style="margin-left:-230px;">
+                                Admin
+                            </h2>
+                        </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="button" value="Edit details 📝" onclick="edit_details()">
+                            <input type="button" value="View Profile 👤" onclick="view_details()">
+                            <input type="button" value="Update Password 🔒" onclick="u_pass()" style="margin-top:-50px;">
+                        </td>
+                        <td>
+                            <a href="signin_admin.html">
+                                <input type="image" src="logout.png" title="Log out" value= "Log out" width="18">
+                            </a>
+                        </td>
+                    </tr>
+            </table>
+        </div>
+    </div>
+</div>  
+    <div class="edit-details" id="details">
+        <h1 class="choose-one">
+            #Details
+        </h1>
+        <div class="details">
+            <h1>
+                Hello,
+            </h1> 
+            <h2>
+                Admin
+            </h2>
+            <div class="form">
+                <table>
+                    <tr>
+                        <td>
+                            <h2>
+                                # Edit Details 📝 
+                            </h2>
+                        </td>
+                        <td>
+
+                        </td>
+                        <tr>
+                        <td>
+                            <form>
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <label for="name">
+                                                Name  
+                                            </label>
+                                        </td>
+                                        <td>
+                                            : 
+                                        </td>
+                                        <td>
+                                            <input type="text" placeholder="Enter your name" id="name" maxlength="30" autofocus>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <label for="fname">
+                                                Father's Name 
+                                            </label>
+                                        </td>
+                                        <td>
+                                            : 
+                                        </td>
+                                        <td>
+                                            <input type="text" placeholder="Father's Name" id="fname" maxlength="30">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <label for="name">
+                                                Mother's Name  
+                                            </label>
+                                        </td>
+                                        <td>
+                                            : 
+                                        </td>
+                                        <td>
+                                            <input type="text" placeholder="Mother's Name" id="mname" maxlength="30">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <label for="course">
+                                                Course
+                                            </label>
+                                        </td>
+                                        <td>
+                                            : 
+                                        </td>
+                                        <td>
+                                            <select id="course">
+                                                <option>
+                                                    PUC
+                                                </option>
+                                                <option>
+                                                    Engineering
+                                                </option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <label for="year">
+                                                Year
+                                            </label>
+                                        </td>
+                                        <td>
+                                            : 
+                                        </td>
+                                        <td>
+                                            <select id="year">
+                                                <option>
+                                                    First Year
+                                                </option>
+                                                <option>
+                                                    Second Year
+                                                </option>
+                                                <option>
+                                                    Third Year
+                                                </option>
+                                                <option>
+                                                    Fourth Year
+                                                </option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <label for="phone">
+                                                Phone No
+                                            </label>
+                                        </td>
+                                        <td>
+                                            :
+                                        </td>
+                                        <td>
+                                            <input type="tel" placeholder="Enter phone number" maxlength="10">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <label for="place">
+                                                Place
+                                            </label>
+                                        </td>
+                                        <td>
+                                            : 
+                                        </td>
+                                        <td>
+                                            <input type="text" placeholder="Enter your Place / Locality" id="place" maxlength="20">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <lable for="dob">
+                                                DOB
+                                            </lable>
+                                        </td>
+                                        <td>
+                                            :
+                                        </td>
+                                        <td>
+                                            <input type="date">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td colspan="2">
+                                            <input type="button" Value="Submit" id="submit" onclick="submit_details()">
+                                        </td>
+                                    </tr>
+                                </table>
+                            </form>
+                        </td>
+                    </tr>
+                </table>
+                <div class="alert-danger" id="alert-danger">
+                    <strong>
+                        There's an error in submitting! Please try again.
+                    </strong>
+                </div>
+                <div class="alert-positive" id="alert-positive">
+                    <strong>
+                        Successfully Submitted 
+                    </strong>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br />
+    <div class="view-details" id="view_details">
+        <h1 class="choose-one">
+            #Profile 
+        </h1>
+        <div class="details">
+            <h1>
+                Hello,
+            </h1> 
+            <h2>
+                Admin
+            </h2>
+            <div class="form">
+                <table>
+                    <tr>
+                        <td>
+                            <h2>
+                                # View Profile 👤
+                            </h2>
+                        </td>
+                        <td>
+
+                        </td>
+                        <tr>
+                        <td>
+                            <form>
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <label for="name">
+                                                Name  
+                                            </label>
+                                        </td>
+                                        <td>
+                                            : 
+                                        </td>
+                                        <td>
+                                            <p>--</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <label for="fname">
+                                                Father's Name 
+                                            </label>
+                                        </td>
+                                        <td>
+                                            : 
+                                        </td>
+                                        <td>
+                                            <p>--</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <label for="name">
+                                                Mother's Name  
+                                            </label>
+                                        </td>
+                                        <td>
+                                            : 
+                                        </td>
+                                        <td>
+                                            <p>--</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <label for="course">
+                                                Course
+                                            </label>
+                                        </td>
+                                        <td>
+                                            : 
+                                        </td>
+                                        <td>
+                                            <p>--</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <label for="year">
+                                                Year
+                                            </label>
+                                        </td>
+                                        <td>
+                                            : 
+                                        </td>
+                                        <td>
+                                            <p>--</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <label for="phone">
+                                                Phone No
+                                            </label>
+                                        </td>
+                                        <td>
+                                            :
+                                        </td>
+                                        <td>
+                                            <p>--</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <label for="place">
+                                                Place
+                                            </label>
+                                        </td>
+                                        <td>
+                                            : 
+                                        </td>
+                                        <td>
+                                            <p>--</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <lable for="dob">
+                                                DOB
+                                            </lable>
+                                        </td>
+                                        <td>
+                                            :
+                                        </td>
+                                        <td>
+                                            <p>--</p>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </form>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    <br /><br />
+    <br /><br />
+    <br /><br />
+
+    </div>  
+    <div class="update-pass" id="u-pass">
+        <h1 class="choose-one">
+            Password
+        </h1>
+        <div class="details">
+            <h1>
+                Hello,
+            </h1> 
+            <h2>
+                Admin
+            </h2>
+            <div class="form">
+                <table>
+                    <tr>
+                        <td>
+                            <h2>
+                                #Update Password 🔒
+                            </h2>
+                        </td>
+                        <td>
+
+                        </td>
+                        <tr>
+                        <td>
+                            <form>
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <label for="new-pass">
+                                                New Password 
+                                            </label>
+                                        </td>
+                                        <td>
+                                            : 
+                                        </td>
+                                        <td>
+                                            <input type="password" placeholder="Enter Password" id="new-pass" maxlength="10" autofocus required>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <label for="pass">
+                                                Re-enter Password
+                                            </label>
+                                        </td>
+                                        <td>
+                                            : 
+                                        </td>
+                                        <td>
+                                            <input type="password" placeholder="Re-enter password" id="pass" maxlength="10" required>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td colspan="2">
+                                            <input type="button" Value="Submit" id="submit" onclick="submit_pass()">
+                                        </td>
+                                    </tr>
+                                </table>
+                            </form>
+                        </td>
+                    </tr>
+                </table>
+                <div class="alert-danger" id="danger">
+                    <strong>
+                        There's an error in Updating! Please try again.
+                    </strong>
+                </div>
+                <div class="alert-positive" id="positive">
+                    <strong>
+                        Successfully Updated 
+                    </strong>
+                </div>
+            </div>
+        </div>
+        <br /><br /><br /><br />
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="actions" id="actions">
+        <h1 class="choose-one">
+            # Actions
+        </h1>
+        <div class="main">
+            <div class="options">
+                <p id="heading" onclick="heading()">
+                    Student Complaints
+                </p>
+                <p id="outpass" onclick="outpass()">
+                    Student Outpass
+                </p>
+                <p id="students" onclick="stu_profile()">
+                    Student Profile
+                </p>
+            </div>
+        <div class="options-body" id="options-body">
+
+
+            <div class="student-complaints" id="student-complaints">
+                <table>
+                    <tr>
+                        <td>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero possimus non iste minima repellat doloribus ea nam deleniti et tempore quibusdam at id officia perspiciatis, molestias quisquam dignissimos a quidem.
+                        </td>
+                        <td>
+                            <div class="decision">
+                                <input type="submit" value="Approve"  onclick="outpass_approve()">
+                                <input type="submit" value="Decline"  onclick="outpass_decline()">
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero possimus non iste minima repellat doloribus ea nam deleniti et tempore quibusdam at id officia perspiciatis, molestias quisquam dignissimos a quidem.
+                        </td>
+                        <td>
+                            <div class="decision">
+                                <input type="submit" value="Approve"  onclick="outpass_approve()">
+                                <input type="submit" value="Decline"  onclick="outpass_decline()">
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero possimus non iste minima repellat doloribus ea nam deleniti et tempore quibusdam at id officia perspiciatis, molestias quisquam dignissimos a quidem.
+                        </td>
+                        <td>
+                            <div class="decision">
+                                <input type="submit" value="Approve"  onclick="outpass_approve()">
+                                <input type="submit" value="Decline"  onclick="outpass_decline()">
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero possimus non iste minima repellat doloribus ea nam deleniti et tempore quibusdam at id officia perspiciatis, molestias quisquam dignissimos a quidem.
+                        </td>
+                        <td>
+                            <div class="decision">
+                                <input type="submit" value="Approve"  onclick="outpass_approve()">
+                                <input type="submit" value="Decline"  onclick="outpass_decline()">
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero possimus non iste minima repellat doloribus ea nam deleniti et tempore quibusdam at id officia perspiciatis, molestias quisquam dignissimos a quidem.
+                        </td>
+                        <td>
+                            <div class="decision">
+                                <input type="submit" value="Approve"  onclick="outpass_approve()">
+                                <input type="submit" value="Decline"  onclick="outpass_decline()">
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero possimus non iste minima repellat doloribus ea nam deleniti et tempore quibusdam at id officia perspiciatis, molestias quisquam dignissimos a quidem.
+                        </td>
+                        <td>
+                            <div class="decision">
+                                <input type="submit" value="Approve"  onclick="outpass_approve()">
+                                <input type="submit" value="Decline"  onclick="outpass_decline()">
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+
+            <div class="student-outpass" id="student-outpass">              
+                    <table>
+                        <tr>
+                            <td rowspan="10">
+                                1
+                            </td>
+                            <td>
+                                Name
+                            </td>
+                            <td>
+                                :
+                            </td>
+                            <td>
+                                ''
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Branch 
+                            </td>
+                            <td>
+                                :
+                            </td>
+                            <td>
+                                ''
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Section
+                            </td>
+                            <td>
+                                :
+                            </td>
+                            <td>
+                                ''
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Phone Number 
+                            </td>
+                            <td>
+                                :
+                            </td>
+                            <td>
+                                ''
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Leaving with relatives
+                            </td>
+                            <td>
+                                :
+                            </td>
+                            <td>
+                                ''
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Relatives name 
+                            </td>
+                            <td>
+                                :
+                            </td>
+                            <td>
+                                ''
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Relation 
+                            </td>
+                            <td>
+                                :
+                            </td>
+                            <td>
+                                ''
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Their Phone Number 
+                            </td>
+                            <td>
+                                :
+                            </td>
+                            <td>
+                                ''
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Duration
+                            </td>
+                            <td>
+                                :
+                            </td>
+                            <td>
+                                ''
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                <div class="decision">
+                                    <input type="submit" value="Approve"  onclick="outpass_approve()">
+                                    <input type="submit" value="Decline"  onclick="outpass_decline()">
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                    <table>
+                        <tr>
+                            <td rowspan="10">
+                                2
+                            </td>
+                            <td>
+                                Name
+                            </td>
+                            <td>
+                                :
+                            </td>
+                            <td>
+                                ''
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Branch 
+                            </td>
+                            <td>
+                                :
+                            </td>
+                            <td>
+                                ''
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Section
+                            </td>
+                            <td>
+                                :
+                            </td>
+                            <td>
+                                ''
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Phone Number 
+                            </td>
+                            <td>
+                                :
+                            </td>
+                            <td>
+                                ''
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Leaving with relatives
+                            </td>
+                            <td>
+                                :
+                            </td>
+                            <td>
+                                ''
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Relatives name 
+                            </td>
+                            <td>
+                                :
+                            </td>
+                            <td>
+                                ''
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Relation 
+                            </td>
+                            <td>
+                                :
+                            </td>
+                            <td>
+                                ''
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Their Phone Number 
+                            </td>
+                            <td>
+                                :
+                            </td>
+                            <td>
+                                ''
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Duration
+                            </td>
+                            <td>
+                                :
+                            </td>
+                            <td>
+                                ''
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                <div class="decision">
+                                    <input type="submit" value="Approve"  onclick="outpass_approve()">
+                                    <input type="submit" value="Decline"  onclick="outpass_decline()">
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                    <table>
+                        <tr>
+                            <td rowspan="10">
+                                3
+                            </td>
+                            <td>
+                                Name
+                            </td>
+                            <td>
+                                :
+                            </td>
+                            <td>
+                                ''
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Branch 
+                            </td>
+                            <td>
+                                :
+                            </td>
+                            <td>
+                                ''
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Section
+                            </td>
+                            <td>
+                                :
+                            </td>
+                            <td>
+                                ''
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Phone Number 
+                            </td>
+                            <td>
+                                :
+                            </td>
+                            <td>
+                                ''
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Leaving with relatives
+                            </td>
+                            <td>
+                                :
+                            </td>
+                            <td>
+                                ''
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Relatives name 
+                            </td>
+                            <td>
+                                :
+                            </td>
+                            <td>
+                                ''
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Relation 
+                            </td>
+                            <td>
+                                :
+                            </td>
+                            <td>
+                                ''
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Their Phone Number 
+                            </td>
+                            <td>
+                                :
+                            </td>
+                            <td>
+                                ''
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Duration
+                            </td>
+                            <td>
+                                :
+                            </td>
+                            <td>
+                                ''
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                <div class="decision">
+                                    <input type="submit" value="Approve"  onclick="outpass_approve()">
+                                    <input type="submit" value="Decline"  onclick="outpass_decline()">
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+        </div>
+        <div class="student-profile"  id="student-profile">
+            <table>
+                <tr>
+                    <td>
+                        <input type="text" id="search" placeholder="Enter ID Number Of the Student">
+                    </td>
+                    <td>
+                        <input type="image" src="search_FILL0_wght400_GRAD0_opsz24.png">
+                    </td>
+                </tr>
+            </table>
+        </div>
+        </div>  
+    </div>
+
+
+
+
+
+    <h1 class="choose-one">
+        # Updates
+    </h1>
+    <div class="updates">
+        Add an Update..
+    </div>
+
+
+    <br />
+    <br />
+
+    <div class="footer">
+        <p>
+            Copyright &copy; RGUKT - ONG
+        </p>
+        <p>
+            Made with &hearts; by Sree Charan
+        </p>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>
