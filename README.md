@@ -83,7 +83,7 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 Feel free to reach out to me for any questions or collaboration opportunities:
 
 - GitHub: [sreecharan-desu](https://github.com/sreecharan-desu)
-- Email: [your_email@example.com](mailto:your_email@example.com)
+- Email: [your_email@example.com](mailto:sreecharan309@gmail.com)
 
 ---
 
