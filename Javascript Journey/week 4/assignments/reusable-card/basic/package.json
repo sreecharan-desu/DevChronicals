@@ -1,0 +1,11 @@
+{
+  "name": "reusable-card-basic",
+  "version": "1.0.0",
+  "description": "A Place where users can create a card of their own details with ease",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "SreeCharan Desu",
+  "license": "MIT"
+}

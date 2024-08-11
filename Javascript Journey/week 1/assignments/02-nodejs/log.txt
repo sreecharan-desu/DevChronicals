@@ -1,0 +1,14 @@
+----------------------------------------------------- USER_LOGS -------------------------------------------------------------
+
+
+{"msg":"Particular Todo","method":"GET","Status":200,"Id":"TD73083413985680"}
+{"msg":"Todos List","method":"GET","Status":200,"ToDos":[{"title":"TO_DO_1","description":"Description_1","id":"TD73083413985680"},{"title":"TO_DO_2","description":"Description_2","id":"TD37781753494901"}]}
+{"msg":"Todos List","method":"GET","Status":200,"ToDos":[{"title":"TO_DO_1","description":"Description_1","id":"TD73083413985680"},{"title":"TO_DO_2","description":"Description_2","id":"TD37781753494901"}]}
+{"msg":"Todos List","method":"GET","Status":200,"ToDos":[{"title":"TO_DO_1","description":"Description_1","id":"TD73083413985680"},{"title":"TO_DO_2","description":"Description_2","id":"TD37781753494901"}]}
+{"msg":"Todos List","method":"GET","Status":200,"ToDos":[{"title":"TO_DO_1","description":"Description_1","id":"TD73083413985680"},{"title":"TO_DO_2","description":"Description_2","id":"TD37781753494901"}]}
+{"msg":"Todos List","method":"GET","Status":200,"ToDos":[{"title":"TO_DO_1","description":"Description_1","id":"TD73083413985680"},{"title":"TO_DO_2","description":"Description_2","id":"TD37781753494901"}]}
+{"msg":"DELETE_TODO","method":"DELETE","Status":200,"Id":"FOUND AND DELETED"}
+{"msg":"Todos List","method":"GET","Status":200,"ToDos":[{"title":"TO_DO_2","description":"Description_2","id":"TD37781753494901"}]}
+{"msg":"DELETE_TODO","method":"DELETE","Status":200,"Id":"FOUND AND DELETED"}
+{"msg":"DELETE_TODO","method":"DELETE","Status":404,"Id":"NOT_FOUND"}
+{"msg":"Todos List","method":"GET","Status":200,"ToDos":[]}

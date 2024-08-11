@@ -1,0 +1,56 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+
+//Step by step Process to integrate Prisma in your project
+
+//npm init -y
+//npm install prisma
+//npx tsc --init
+//npx prisma init
+//npx prisma migrate dev --name  --> For migrating the database
+
+//After this you will see
+
+// postgres=# \dt
+//                List of relations
+//  Schema |        Name        | Type  |  Owner   
+// --------+--------------------+-------+----------
+//  public | Todo               | table | postgres
+//  public | User               | table | postgres
+//  public | _prisma_migrations | table | postgres
+// (3 rows)
+
+// postgres=# 
+
+//---------- Autogenerate The Clients
+  // --npx prisma generate
+
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id Int @id @default(autoincrement())
+  email     String @unique
+  password  String ?
+  firstName String ?
+  LastName  String 
+} 
+
+model Todo {
+  id Int @id @default(autoincrement())
+  title String
+  done Boolean @default(false)
+  description String?
+  userId Int
+}

@@ -28,6 +28,7 @@ Here’s a brief overview of the projects included in this repository:
 - **Portfolio**: My personal portfolio showcasing my skills and projects.
 - **Reusable Card**: A component library for creating reusable card components.
 - **Study Buddies**: A platform for connecting students for collaborative learning.
+- **My JavaScript Journey** : My Personal Journey from Javascript - React - TypeScript
 
 ## Getting Started
 

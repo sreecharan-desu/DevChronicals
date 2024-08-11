@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LibraLite</title>
+</head>
+<body>
+    <div id="content">
+        <input type="text" id="username">
+        <br /><br />
+        <input type="text"  id="password">
+        <br /><br />
+        <input type="button" value="ClickMe" onclick="GetData()">
+    </div>
+
+    <div id="response">
+
+    </div>
+</body>
+<script>
+    let content = document.getElementById("response");
+    async function GetData(){
+        a = parseInt(document.getElementById("username").value)
+        b = parseInt(document.getElementById("password").value)
+        let Response = await fetch(`http://localhost:5000/sum?a=${a}&b=${b}`);
+        let data = await Response.json()
+        content.innerHTML = `${a} + ${b} = ${data.msg}`;
+    }
+</script>
+</html>
