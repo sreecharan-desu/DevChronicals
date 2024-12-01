@@ -1,0 +1,114 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: "Cabin Condensed", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar-thumb{
+  background-color:rgba(155, 155, 155,0.4);
+  border-radius:30px;
+}
+
+::-webkit-scrollbar{
+  background-color:transparent;
+}
+
+@keyframes movedown {
+  from{
+    opacity:0;
+    margin-top:-100px;
+  }to{
+    opacity:1;
+    margin-top:0px;
+  }
+}
+
+@keyframes moveright {
+  from{
+    opacity:0;
+    margin-left:-100px;
+  }to{
+    opacity:1;
+    margin-left:0px;
+  }
+}
+
+
+@keyframes moveup {
+  from{
+    opacity:0;
+    margin-top:0px;
+  }to{
+    opacity:1;
+    margin-top:-100px;
+  }
+}
+
+@keyframes movecarddown {
+  from{
+    opacity:0;
+    margin-top:-100px;
+  }to{
+    opacity:1;
+    margin-top:0px;
+  }
+}
+
+.movedown{
+  animation: movedown 1s ease 0s 1 normal none;
+}
+
+.moveup{
+  animation: moveup 1s ease 0s 1 normal none;
+}
+
+.moveright{
+  animation: moveright 1s ease 0s 1 normal none;
+}
+
+.moverightsub{
+    animation: moveright 4s ease 0s 1 normal none;
+}
+
+
+.movecarddown{
+  animation: movedown 1s ease 0s 1 normal none;
+}
+
+
+@keyframes pulse {
+  from{
+    opacity:0;
+  }
+  50% {
+      opacity: .5;
+  }to{
+    opacity:0;
+  }
+}
+.animate-pulse {
+    animation: pulse 0.5s cubic-bezier(0.4, 0, 0.6, 1) 3;
+}
+
+
+@keyframes swipe-right {
+  from{
+    opacity:0;
+    margin-left:-200px;
+  }to{
+    opacity:1;
+    margin-left:0px;
+  }
+}
+
+.swipe-right{
+    animation: swipe-right 0.5s cubic-bezier(0.4, 0, 0.6, 1);
+}

@@ -1,0 +1,19 @@
+/* src/index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+*{
+    font-family: "Cabin Condensed", serif;
+}
+
+
+::-webkit-scrollbar{
+    background-color:#94a3b8;
+}
+
+
+html{
+    scroll-behavior: smooth;
+}

@@ -1,0 +1,6 @@
+name = "backend"
+compatibility_date = "2024-09-28"
+compatibility_flags = [ "nodejs_compat" ]
+[vars]
+DATABASE_URL="prisma://accelerate.prisma-data.net/?api_key=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcGlfa2V5IjoiYjk0ZDAxNDEtZDgzNS00YjE2LWExOTUtYmIyMjQzNjhmZWEyIiwidGVuYW50X2lkIjoiMzVkZDk2YjA5YWYyNmY4ZDBkNDcxODkxOTVmZTNmYmI3ODQ4NTM2NDFlYzFiOGNjOTUxNzljNDYzYTI2MWY3MCIsImludGVybmFsX3NlY3JldCI6IjQyYmE4ZDBlLTQwYmYtNDFkNC1iMThkLTY4YjVlOTE2OGU0OSJ9.0O-6F82lMSV6iAvzL3SPOs_jRiDP10wqNT5KccbMHWM"
+DIRECT_URL="postgresql://neondb_owner:6MwWqmB8kXAO@ep-icy-sky-a1548qk4.ap-southeast-1.aws.neon.tech/neondb?sslmode=require"

@@ -1,0 +1,13 @@
+export const STUDENT_SIGNIN_API = '';
+export const CARETAKER_SIGNIN_API = "";
+export const WARDEN_SIGNIN_API = "";
+export const DEAN_SIGNIN_API = "";
+export const ADMIN_SIGNIN_API = "";
+export const AUTH_API = "";
+export const GET_USERNAME_API = "" 
+export const GET_APPLICATION_STATUS = "";
+export const SEND_OUTPASS_REQUEST = "";
+export const SEND_OUTING_REQUEST = "";
+export const GET_WAITINGLIST = "";
+export const GET_GIVENPASSES = "";
+export const FILE_UPLOAD = "";
