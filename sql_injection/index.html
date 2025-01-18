@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <style>
+    .eye-button {
+      cursor: pointer;
+      background: none;
+      border: none;
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      font-size: 16px;
+    }
+    .password-container {
+      position: relative;
+      display: inline-block;
+    }
+  </style>
+</head>
+<body>
+  <h1>Login Form</h1>
+  <form id="loginForm">
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" required><br><br>
+
+    <label for="password">Password:</label>
+    <div class="password-container">
+      <input type="password" id="password" name="password" required>
+      <button type="button" id="togglePassword" class="eye-button">&#128065;</button>
+    </div><br><br>
+
+    <button type="submit">Login</button>
+  </form>
+
+  <div id="responseMessage"></div>
+
+  <script>
+    // Toggle password visibility
+    document.getElementById("togglePassword").addEventListener("click", () => {
+      const passwordInput = document.getElementById("password");
+      const toggleButton = document.getElementById("togglePassword");
+
+      if (passwordInput.type === "password") {
+        passwordInput.type = "text";
+        toggleButton.innerHTML = "&#128065;"; // Optionally change the icon
+      } else {
+        passwordInput.type = "password";
+        toggleButton.innerHTML = "&#128065;"; // Optionally revert the icon
+      }
+    });
+
+    // Handle form submission
+    document.getElementById("loginForm").addEventListener("submit", async (event) => {
+      event.preventDefault(); // Prevent the form from reloading the page
+
+      const bodyData = {
+        username: document.getElementById("username").value,
+        password: document.getElementById("password").value,
+      };
+
+      try {
+        const res = await fetch('http://localhost:3001/login', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(bodyData),
+        });
+
+        const data = await res.text();
+        document.getElementById("responseMessage").innerHTML = data;
+      } catch (error) {
+        console.error("Error:", error);
+        document.getElementById("responseMessage").innerHTML = "An error occurred. Please try again.";
+      }
+    });
+  </script>
+</body>
+</html>

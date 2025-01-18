@@ -1,0 +1,63 @@
+Scene 1: Opening (Energetic and Engaging)
+
+🎥 Camera focuses on you, smiling confidently at the audience.
+
+"Alright, so you wanna hack websites just like me? Well, let’s get started. 
+Grab your laptop because today, we’re diving into one of the most infamous techniques used by hackers—'SQL Injection.'
+Now, I’ve got to say, this method is old-school, but trust me, it still packs a punch 
+if the target hasn’t secured their system properly. But before we go any further, disclaimer: This is for educational purposes only.
+Hacking without permission is illegal and unethical. Use this knowledge responsibly!"
+
+🎶 Cue intense background music.
+
+Scene 2: Introduction to SQL and Basic Syntax
+🎥 Camera switches to your screen, where you show an example database and SQL queries.
+
+"First, let’s break it down. SQL stands for Structured Query Language. It’s how websites communicate with their databases. Imagine you’re logging into a website:
+
+You enter your username and password.
+The website takes that information and runs a query like this in the background:
+sql
+Copy
+Edit
+SELECT * FROM users 
+WHERE username = 'your_username' 
+AND password = 'your_password';
+If the database finds a match, you’re in. If not, no access."
+🎥 Pause for effect, then zoom in on the SQL query.
+
+"Now, here’s where SQL Injection comes into play. What if instead of entering a username, we add a bit of malicious code? Like this:
+
+sql
+Copy
+Edit
+' OR '1'='1;
+This simple input can trick the database into giving us access without knowing the real password. Let me show you why."
+
+Scene 3: Demonstration of SQL Injection
+🎥 Switch to a demo environment where you show a vulnerable website.
+
+"I’ve set up a demo website for this. Let’s log in with the username 'admin' and this malicious input as the password:
+
+sql
+Copy
+Edit
+' OR '1'='1;
+Here’s what happens behind the scenes:
+
+sql
+Copy
+Edit
+SELECT * FROM users 
+WHERE username = 'admin' 
+AND password = '' OR '1'='1';
+The database reads this and thinks, ‘Hey, this condition is always true!’ Boom—we’re in without needing a real password."
+
+Scene 4: Wrap-Up and Warning
+🎥 Switch back to you, emphasizing the importance of security.
+
+"Now, don’t get too excited—this only works if the website is poorly coded. Most modern websites use techniques like prepared statements to protect against SQL Injection. But if you’re a developer, make sure you secure your queries, sanitize user inputs, and never trust what users enter!
+
+And remember, hacking without permission is illegal. Use this knowledge to learn and grow, not to cause harm. If you enjoyed this breakdown, hit the like button and subscribe for more tech insights!"
+
+🎶 Outro music with your channel branding.
